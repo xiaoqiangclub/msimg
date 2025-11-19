@@ -1,14 +1,13 @@
 [tool.poetry]
 name = "msimg"
 version = "0.0.1"
-description = "🎨 一个魔塔社区文生图API调用库，支持多模型、多API、容错重试、图床上传等高级特性"
+description = "🎨 一个优雅的魔塔社区文生图API调用库，支持多模型、多API、容错重试、内置8种图床等高级特性"
 authors = ["Xiaoqiang <xiaoqiangclub@hotmail.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/xiaoqiangclub/msimg"
 repository = "https://github.com/xiaoqiangclub/msimg"
-documentation = "https://github.com/xiaoqiangclub/msimg"
-keywords = ["modelscope", "text-to-image", "ai", "image-generation", "text2img"]
+keywords = ["modelscope", "text-to-image", "ai", "image-generation", "flux", "qwen", "image-uploader"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -22,18 +21,28 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
+packages = [{include = "msimg"}]
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
 requests = "^2.31.0"
 Pillow = "^10.0.0"
 
+# 可选依赖（云服务图床）
+qiniu = {version = "^7.12.0", optional = true}
+oss2 = {version = "^2.18.0", optional = true}
+upyun = {version = "^2.5.0", optional = true}
+
+[tool.poetry.extras]
+qiniu = ["qiniu"]
+aliyun = ["oss2"]
+upyun = ["upyun"]
+all = ["qiniu", "oss2", "upyun"]
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
 black = "^23.7.0"
 flake8 = "^6.1.0"
-mypy = "^1.5.0"
-isort = "^5.12.0"
 
 [build-system]
 requires = ["poetry-core"]

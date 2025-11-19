@@ -958,7 +958,7 @@ result = generate_image(
 
 <div align="center">
 
-**Made with ❤️ by [Xiaoqiang](https://xiaoqiangclub.qzz.io/)**
+**Made with ❤️ by [Xiaoqiang](https://xiaoqiangclub.github.io/)**
 
 **如果这个项目对你有帮助，请给一个 Star ⭐️**
 
