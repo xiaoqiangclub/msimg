@@ -53,7 +53,20 @@
 ## 📦 安装
 
 ```bash
+# 基础安装（免费图床）
 pip install msimg
+
+# 安装七牛云支持
+pip install msimg[qiniu]
+
+# 安装阿里云支持
+pip install msimg[aliyun]
+
+# 安装又拍云支持
+pip install msimg[upyun]
+
+# 安装全部云服务
+pip install msimg[all]
 ```
 
 **环境要求**：
