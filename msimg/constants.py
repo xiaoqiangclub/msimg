@@ -47,6 +47,7 @@ FULL_MODEL_IDS = {
 # 任务状态映射
 TASK_STATUS_MAP = {
     "PENDING": "⏳ 等待中",
+    "PROCESSING": "🎨 生成中",
     "RUNNING": "🏃 执行中",
     "SUCCEED": "✅ 成功",
     "FAILED": "❌ 失败",
