@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "msimg"
-version = "0.0.1"
+version = "0.0.2"
 description = "🎨 一个优雅的魔塔社区文生图API调用库，支持多模型、多API、容错重试、内置8种图床等高级特性"
 authors = ["Xiaoqiang <xiaoqiangclub@hotmail.com>"]
 license = "MIT"

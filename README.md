@@ -1,10 +1,9 @@
 <div align="center">
 
-![msimg](images/msimg.jpeg)
+![msimg](https://s2.loli.net/2025/11/19/BpoquUeVY2lZxIg.jpg)
 
-[![PyPI Version](https://img.shields.io/badge/PyPI-0.0.1-blue)](https://pypi.org/project/msimg/) [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![License](https://img.shields.io/github/license/xiaoqiangclub/msimg)](https://github.com/xiaoqiangclub/msimg/blob/main/LICENSE) [![ModelScope](https://img.shields.io/badge/ModelScope-魔塔社区-orange)](https://www.modelscope.cn/)
+[![PyPI Version](https://img.shields.io/badge/PyPI-0.0.2-blue)](https://pypi.org/project/msimg/) [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![License](https://img.shields.io/github/license/xiaoqiangclub/msimg)](https://github.com/xiaoqiangclub/msimg/blob/main/LICENSE) [![ModelScope](https://img.shields.io/badge/ModelScope-魔塔社区-orange)](https://www.modelscope.cn/)
 
-<!-- 预留配图位置 -->
 
 </div>
 
