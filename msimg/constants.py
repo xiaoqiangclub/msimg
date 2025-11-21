@@ -12,12 +12,13 @@ DEFAULT_BASE_URL = "https://api-inference.modelscope.cn/"
 # 支持的图片尺寸比例映射（快速设置）
 SIZE_PRESETS = {
     "1:1": "1328x1328",
-    "16:9": "1664x928",
-    "9:16": "928x1664",
-    "4:3": "1472x1140",
-    "3:4": "1140x1472",
-    "3:2": "1584x1056",
     "2:3": "1056x1584",
+    "2.35:1": "1880x800",  # 微信公众号封面图尺寸
+    "3:2": "1584x1056",
+    "3:4": "1140x1472",
+    "4:3": "1472x1140",
+    "9:16": "928x1664",
+    "16:9": "1664x928",
 }
 
 # 预设模型列表
@@ -25,12 +26,12 @@ MODEL_PRESETS = {
     # 通义万相
     "qwen": "Qwen/Qwen-Image",
     "qwen-image": "Qwen/Qwen-Image",
-    
+
     # FLUX 系列
     "flux-majic": "MAILAND/majicflus_v1",
     "flux-muse": "MusePublic/489_ckpt_FLUX_1",
     "flux-xiaohongshu": "yiwanji/FLUX_xiao_hong_shu_ji_zhi_zhen_shi_V2",
-    
+
     # Stable Diffusion XL
     "sdxl-muse": "MusePublic/42_ckpt_SD_XL",
 }

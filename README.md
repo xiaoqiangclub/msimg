@@ -2,7 +2,7 @@
 
 ![msimg](https://s2.loli.net/2025/11/19/BpoquUeVY2lZxIg.jpg)
 
-[![PyPI Version](https://img.shields.io/badge/PyPI-0.0.2-blue)](https://pypi.org/project/msimg/) [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![License](https://img.shields.io/github/license/xiaoqiangclub/msimg)](https://github.com/xiaoqiangclub/msimg/blob/main/LICENSE) [![ModelScope](https://img.shields.io/badge/ModelScope-魔塔社区-orange)](https://www.modelscope.cn/)
+[![PyPI Version](https://img.shields.io/badge/PyPI-0.0.3-blue)](https://pypi.org/project/msimg/) [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/) [![License](https://img.shields.io/github/license/xiaoqiangclub/msimg)](https://github.com/xiaoqiangclub/msimg/blob/main/LICENSE) [![ModelScope](https://img.shields.io/badge/ModelScope-魔塔社区-orange)](https://www.modelscope.cn/)
 
 
 </div>
@@ -30,6 +30,7 @@
   - [📢 消息通知](#-消息通知)
   - [📋 完整参数说明](#-完整参数说明)
   - [❓ 常见问题](#-常见问题)
+- [🎉 版本更新](#-版本更新)
 - [🔗 相关链接](#-相关链接)
 - [💖 打赏支持](#-打赏支持)
 - [📄 许可证](#-许可证)
@@ -936,6 +937,54 @@ result = generate_image(
 
 ---
 
+## 🎉 版本更新
+
+### v0.0.3
+
+#### 🆕 新增：微信公众号图床上传
+
+支持将图片上传到微信公众号作为图床，解决 IP 白名单限制问题。
+
+**核心特性：**
+
+- 📦 三种上传方式：临时素材（3天）/ 永久素材 / 图文消息图片
+- 🔄 智能 Token 获取：优先服务器获取，失败自动降级
+- ✅ 支持多种输入：PIL.Image / 本地路径 / URL / Base64 / bytes
+- 💾 自动缓存、格式转换、大小检查
+
+#### 📝 快速使用
+
+```python
+from msimg import generate_image, create_wechat_uploader, WechatUploadType
+
+# 创建上传器
+wechat_upload = create_wechat_uploader(
+    app_id="wx1234567890",
+    app_secret="your_app_secret",
+    server_url="https://your-server.com/api/token",  # 可选，推荐
+    upload_type=WechatUploadType.PERMANENT
+)
+
+# 生成并上传
+result = generate_image(
+    prompt="一只可爱的猫",
+    api_configs="your-api-key",
+    image_upload_callbacks=wechat_upload,
+    upload_on_success=True
+)
+```
+
+#### 🌐 服务器接口（可选）
+
+如果遇到 IP 白名单限制，可以搭建服务器统一获取 `access_token`。
+
+**接口说明：**
+
+- **请求方式：** POST
+- **请求体：** JSON 格式，可选传入 `{"token": "认证令牌"}` 用于服务器认证
+- **返回格式：** JSON，必须包含 `access_token`（字符串）和 `expires_in`（整数，单位秒）
+
+---
 ## 🔗 相关链接
 
 - 🏠 **ModelScope 官网**：[https://www.modelscope.cn/](https://www.modelscope.cn/)

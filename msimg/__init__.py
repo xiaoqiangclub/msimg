@@ -42,6 +42,13 @@ from .image_uploader import (
     create_local_uploader,
 )
 
+# 微信公众号图床上传器
+from .wechat_uploader import (
+    WechatUploader,
+    create_wechat_uploader,
+    WechatUploadType
+)
+
 __all__ = [
     # 版本信息
     "__version__",
@@ -57,6 +64,7 @@ __all__ = [
     # 策略枚举
     "SelectionStrategy",
     "NotificationMode",
+    "WechatUploadType",
 
     # 预设常量
     "SIZE_PRESETS",
@@ -78,6 +86,7 @@ __all__ = [
     "UpyunUploader",
     "GitHubUploader",
     "LocalStorageUploader",
+    "WechatUploader",
 
     # 图床便捷创建函数
     "create_smms_uploader",
@@ -88,4 +97,5 @@ __all__ = [
     "create_upyun_uploader",
     "create_github_uploader",
     "create_local_uploader",
+    "create_wechat_uploader",
 ]

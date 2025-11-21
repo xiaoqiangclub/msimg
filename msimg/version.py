@@ -6,6 +6,6 @@
 # 文件描述：版本信息
 # 文件路径：msimg/version.py
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __author__ = "Xiaoqiang"
 __email__ = "xiaoqiangclub@hotmail.com"
