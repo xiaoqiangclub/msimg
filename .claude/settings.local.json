@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest cli_anything/msimg/tests/test_core.py -v)",
+      "Bash(python -m pytest cli_anything/msimg/tests/test_full_e2e.py -v)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(cli-anything-msimg:*)"
+    ]
+  }
+}
